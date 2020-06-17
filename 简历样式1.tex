@@ -1,0 +1,211 @@
+% !TeX encoding = GBK
+\documentclass[a4paper, 11pt]{ctexart}
+
+\usepackage{ctex}
+\usepackage{multicol}
+\usepackage{color,xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{fontawesome} % icon库
+\usepackage[colorlinks=true,urlcolor = black]{hyperref}
+
+% 页边距设置
+\usepackage{geometry}
+\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+
+% secion 设置
+\CTEXsetup[format={\kaishu \Large\bfseries\color{myThemecolor}}]{section}
+
+% 颜色设置
+\usepackage{colortbl}
+  \definecolor{mygray}{gray}{0.9}
+  \definecolor{mygray2}{gray}{0.6}
+ 
+ 
+% 自定义 item
+\definecolor{myThemecolor}{rgb}{0,0.3,0.5}
+\newcommand{\CVitemA}[3]
+{
+	\textbf{{\kaishu#1}\hfill {\color{gray}#2} }  \\
+	\ifx #3
+	\else
+	\small\fangsong #3\vspace{\parsep}
+	\\[-2.0ex]
+	\fi 
+}
+
+% 脚注
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+% 自定义星
+\newcommand{\starfouradd}{\faStar\faStar\faStar\faStar\faStarHalfEmpty}
+\newcommand{\starfour}{\faStar\faStar\faStar\faStar\faStarO}
+\newcommand{\starthreeadd}{\faStar\faStar\faStar\faStarHalfEmpty\faStarO}
+\newcommand{\starthree}{\faStar\faStar\faStar\faStarO\faStarO}
+\newcommand{\startwoadd}{\faStar\faStar\faStarHalfEmpty\faStarO\faStarO}
+
+
+
+
+ 
+\begin{document}
+\iffalse
+  About me 
+\fi 
+\begin{multicols}{5}
+	\hspace{0.0cm}
+	\includegraphics[width=3cm]{photo.jpg} 
+	
+	\begin{center}
+	\begin{tabular}{ >{\columncolor{mygray}} c 
+					   >{\columncolor{mygray}} l 
+			           >{\columncolor{mygray}} c 
+			           >{\columncolor{mygray}} l}
+	 
+	 \rowcolor{mygray}\multicolumn{4}{l}{\Huge \lishu 张少杰}\\
+	 
+	 %\faVenus 
+	 性别:& 男 & 
+	 \faPhone & (+86) 13777556325  \\
+	 
+	 
+	 %\faBirthdayCake 
+	 生日:& 1996.08.30   \qquad \qquad  \qquad & 
+	 \faEnvelopeO & \href{mailto:zhangshaojie@zju.edu.cn}{zhangshaojie@zju.edu.cn}  \\
+	 
+	 %\faHome  
+	 住址:& 浙江省杭州市 & 
+	 \faGithub & \url{https://github.com/Jupiter-19}  \qquad \qquad  \qquad  \qquad  \\
+	 
+	 %\faInstitution 
+	 学校:& 浙江大学 & 
+	 %\faGlobe 
+	 主页:& \url{https://jupiter-19.github.io/}\\
+	 
+	 %\faGraduationCap 
+	 专业:& 计算数学 $\cdot$ 硕士 &
+	 兴趣:& 科幻、写博客、随机微分方程 \\
+	\end{tabular}
+	\end{center}
+\end{multicols}
+
+
+
+\iffalse
+  More
+\fi 
+\begin{multicols}{2}
+
+
+% ==================================================================== %
+\section*{\faGraduationCap~教育背景} \vspace{-0.25cm}\hrule
+\CVitemA
+{阿里巴巴达摩院(DAMO)} {2019.03}{冬季大师班(代数几何)}
+\CVitemA
+{浙江大学(ZJU)} {2018.09 - 2021.03}
+{硕士:计算数学；Rank:1/22 \\ 
+ 主修课程：高维统计方法、随机过程、矩阵计算}
+\CVitemA
+{浙江大学(ZJU)} {2014.09 - 2018.07}
+{本科:数学与应用数学；Rank:15/82\\
+ 主修课程：泛函分析、数理统计、算法语言、离散数学、不确定性量化中的数值分析}
+
+
+\vspace{-.8cm}
+% ==================================================================== %
+\section*{\faCogs ~相关技能} \vspace{-0.25cm}\hrule	
+\begin{tabular}{llc}
+ 应用数学 & 数值分析、优化理论、有限元法 & \starfouradd \\ 
+          & 深度学习、统计学习 & \starfour\\ 
+ 编程语言 & Python  & \starfour \\ 
+ 		  & C、C++、R、Matlab  & \startwoadd \\ 
+ 数据分析 & Numpy、Pandas、Scipy &  \starfour \\ 
+	      & Pytorch、TensorFlow、Keras  & \starthreeadd  \\
+ 工具     & LaTeX、Git、Shell & \starthree\\
+\end{tabular} 
+
+
+\vspace{.2cm}
+
+% ==================================================================== %
+\section*{\faTrophy ~  个人荣誉} \vspace{-0.25cm}\hrule
+\CVitemA
+{研究生国家奖学金} {2019.10}{}
+\CVitemA
+{浙江大学官方微信公众号个人专访} {2019.09}{}
+\CVitemA
+{阿里巴巴全球数学竞赛\textsc{Top}50} {2018.12}{}
+\CVitemA
+{浙江大学优秀毕业生} {2018.06}{}
+\CVitemA
+{浙江大学研究与创新奖学金} {2017.10}{}
+\CVitemA
+{浙江大学优秀学生学业奖学金} {2016, 2017}{}
+
+
+\vspace{-.5cm}
+
+% ==================================================================== %
+\section*{\faUsers ~实习经历} \vspace{-0.25cm}\hrule	
+\CVitemA
+{阿里巴巴集团}{2020.05 - 2020.10}
+{ $\bullet$ 担任学术合作实习生. \\
+  $\bullet$ 借助图神经网络等深度学习技术处理多维数据，重构城市和高速道路的车辆行驶轨迹. 采用GTN网络将车辆数据对匹配精度提升至95\%，重定位“UNKNOW”数据精度为60\%.\\
+  $\bullet$  研究深度神经网络的持续学习(\texttt{Continual Learning})技术. 在CIFAR-10和CORe50数据集上使用Pytorch框架复现多篇论文的结果.}
+\CVitemA
+{华为技术有限公司(杭州研究所)}{2019.09 - 2020.01}
+{ $\bullet$ 担任通用软件开发工程师.\\
+  $\bullet$ 优化底层库函数，提高高性能计算速度并给出误差上界的证明，速度提升20\%，误差控制在0.5ULPs.\\
+  $\bullet$ 重排布Fortran源码循环结构，借助OpenMP实现循环的矢量化与并行化.}
+\CVitemA
+{杭州星晴资产管理有限公司}{2018.05 - 2018.08}
+{ $\bullet$ 担任量化金融实习生.\\
+  $\bullet$ 复现国泰君安研报中196个 \texttt{alpha} 因子的效果，根据IC、IR指标缩减因子范围，为高频交易模型提供有效数据支撑.\\
+  $\bullet$ 了解金融市场的运作规律，初步设计 \texttt{alpha} 多因子选股模型，模拟盘收益显著跑赢大盘，开户股市交易.}
+
+
+\vspace{-.5cm}
+% ==================================================================== %
+\section*{\faUniversity~ 校园经历} \vspace{-0.25cm}\hrule
+%\CVitemA{浙江大学本课生课程教学工作}{2018 - 2019}
+%{分别担任《高等数学》、《科学计算》课程助教，工作耐心负责，受到老师和学生好评.}
+\CVitemA{浙江大学大学生科研训练计划}{2016 - 2017}
+{项目名称《基于 \texttt{Markov} 链模型的房地产风险评价》，针对杭州市若干板块进行房价预测与风险估计，利用HMM模型有效发掘出涨幅和风险指数之间的关联，项目评定优秀.}
+\CVitemA
+{数学建模竞赛，3次}{2016 - 2017}
+{2017年美国大学生数学建模竞赛H奖；2016年中国大学生数学建模竞赛三等奖；2016年浙江大学数学建模竞赛二等奖}
+%\CVitemA
+%{浙江大学学生校友联络协会副部长}{2014 - 2016}
+%{组织和参与了第四、第五、第六届“缘定浙大”校友集体婚礼活动志愿者的招募与培训;参加2015浙大学子“走访校友行”暑期社会实践活动.}
+
+
+\end{multicols}
+
+\vspace{-1cm}
+
+% ==================================================================== %
+\section*{\faPaperPlane ~ 自我评价} \vspace{-0.25cm}\hrule
+{\small \qquad 
+喜欢数学、喜欢技术，注重理论与应用并重. 在学校内学习了大量数学课，拥有扎实的理论基础.
+乐于编程，但人生苦短，故用 \texttt{Python}. 乐于分享，欣赏“开源”精神，在简书、\texttt{Github Pages} 等平台写博客. 乐于学习新的知识与技能.
+}
+
+
+% ==================================================================== %
+\blfootnote{
+	\color{mygray2}
+	\faCopyright ~ \textsc{Shaojie Zhang}, ~~
+	%\faCreativeCommons ~ 
+	\faGithub ~ jupiter-19/resume, ~~ by \LaTeX, ~~
+	\faCalendar ~ \today.
+}
+
+\end{document}
